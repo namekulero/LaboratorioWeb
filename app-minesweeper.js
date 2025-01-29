@@ -1,8 +1,8 @@
 let board = [] // Inicializa el tablero como una lista.
 
 const SIZE = { // Inicializa un objeto 'SIZE' con las filas y columnas del tablero.
-    rows: 4,
-    columns: 4,
+    rows: 8,
+    columns: 8,
     length: () => SIZE.rows * SIZE.columns // Cantidad de casillas del tablero.
 }
 
