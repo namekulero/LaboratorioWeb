@@ -1,8 +1,8 @@
 let board = [] // Inicializa el tablero como una lista.
 
 const SIZE = { // Inicializa un objeto 'SIZE' con las filas y columnas del tablero.
-    rows: 8,
-    columns: 8,
+    rows: 8, 
+    columns: 8, 
     length: () => SIZE.rows * SIZE.columns // Cantidad de casillas del tablero.
 }
 
@@ -62,10 +62,10 @@ const fill = (matrix, rows, columns) => { // Función de llenado del tablero.
         matrix[i+1] = [] // Cada posición inicializada en la lista es otra lista.
         for (let j = -1; j < columns; j++) { // Recorre cada columna del tablero.
 
-            if (i == -1) {
-                matrix[i+1][j+1] = toString(i+1);
-            } else if (j == -1) {
-                matrix[i+1][j+1] = toString(j+1);
+            if (i === -1) {
+                matrix[i+1][j+1] = { tile: j+1 };
+            } else if (j === -1) {
+                matrix[i+1][j+1] = { tile: i+1 };
             } else {
                 matrix[i+1][j+1] = { adjMines: 0, suspect: false, mine: false, tile: 'X' }; // Llena el tablero con casillas desconocidas.
             }
