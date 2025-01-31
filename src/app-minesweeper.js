@@ -58,10 +58,17 @@ async function main() { // Función principal
 }
 
 const fill = (matrix, rows, columns) => { // Función de llenado del tablero.
-    for (let i = 0; i < rows; i++) { // Recorre cada fila del tablero.
-        matrix[i] = [] // Cada posición inicializada en la lista es otra lista.
-        for (let j = 0; j < columns; j++) { // Recorre cada columna del tablero.
-            matrix[i][j] = { adjMines: 0, suspect: false, mine: false, tile: 'X' }; // Llena el tablero con casillas desconocidas.
+    for (let i = -1; i < rows; i++) { // Recorre cada fila del tablero.
+        matrix[i+1] = [] // Cada posición inicializada en la lista es otra lista.
+        for (let j = -1; j < columns; j++) { // Recorre cada columna del tablero.
+
+            if (i == -1) {
+                matrix[i+1][j+1] = toString(i+1);
+            } else if (j == -1) {
+                matrix[i+1][j+1] = toString(j+1);
+            } else {
+                matrix[i+1][j+1] = { adjMines: 0, suspect: false, mine: false, tile: 'X' }; // Llena el tablero con casillas desconocidas.
+            }
         }
     };
 }
