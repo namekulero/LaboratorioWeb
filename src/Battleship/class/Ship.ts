@@ -14,7 +14,7 @@ class Ship {
 
 
 
-Esta clase se encuentra fuera de la aplicación debido a que es innecesaria.
+Esta clase es despreciada de la aplicación debido a que es innecesaria.
 Su comportamiento se puede replicar y optimizar con solo variables primitivas.
 
 **/
