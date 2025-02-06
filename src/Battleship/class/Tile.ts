@@ -8,5 +8,5 @@ class Tile implements TileInterface {
 
     hasShip() { return this.containsShip; }
 
-
+    setShip() { this.containsShip = true }
 }

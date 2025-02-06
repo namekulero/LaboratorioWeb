@@ -1,21 +1,20 @@
-/**
-
 class Ship {
-    private _x1: string; private _y1: number; 
-    private _x2: string | null; private _y2: number | null;
+    private x1: number; private y1: number; 
+    private x2: number | undefined; private y2: number | undefined;
     // Coordenadas iniciales y finales de la nave.
 
-    constructor(x1: string, x2: string, y1: number, y2: number) {
-        this._x1 = x1; this._x2 = x2; // Instanciación de variables
-        if (x2 != null && y2 != null) { this._y1 = y1; this._y2 = y2; }
-        // Este condicional es para la nave de una unidad de área.
+    constructor(x1: number, x2: number, y1: number, y2: number) {
+        this.x1 = x1; this.y1 = y1; // Instanciación de variables
+        if (x2 != null && y2 != null) { this.x2 = x2; this.y2 = y2; }
+    }
+
+    getCoords(coords: number[]) {
+        if (this.x2 === undefined) {
+            return [this.x1, this.y1]
+        } else {
+            return [this.x1, this.y1, this.x2, this.y2]
+        }
     }
 }
 
-
-
-Esta clase es despreciada de la aplicación debido a que es innecesaria.
-Su comportamiento se puede replicar y optimizar con solo variables primitivas.
-
-**/
 

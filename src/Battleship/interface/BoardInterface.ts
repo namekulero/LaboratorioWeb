@@ -1,3 +1,3 @@
 interface BoardInterface {
-    getBoard(): Tile[];
+    getBoard(): Tile[][];
 }
