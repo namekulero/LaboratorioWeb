@@ -2,46 +2,15 @@
  Busco aplicar conceptos de OOP principalmente, junto a prácticas de 
  código limpio. **/
 
-// Variables
-
+const bS: number = 6;
 let board_p1: Board
 let board_p2: Board
-
-// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-// Métodos y funciones
 
 async function main() {
     console.log('o8<  Batalla Naval by Lero  >8o')
 
+    
 
-
-
-
-
-
-
-
-
-
+    board_p1 = new Board(bS, bS, )
+    board_p2 = new Board(bS, bS, )
 }
-
-const fill = (matrix, rows, columns) => { // Función de llenado del tablero.
-    for (let i = 0; i < rows; i++) { // Recorre cada fila del tablero.
-        matrix[i] = [] // Cada posición inicializada en la lista es otra lista.
-        for (let j = 0; j < columns; j++) { // Recorre cada columna del tablero.
-            matrix[i][j] = { adjMines: 0, suspect: false, mine: false, tile: 'X' }; // Llena el tablero con casillas desconocidas.
-        }
-    };
-}
-
-
-
-
-
-
